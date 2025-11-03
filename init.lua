@@ -205,7 +205,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
-vim.keymap.set('n', '<leader>t', function()
+vim.keymap.set('n', '<leader>r', function()
   vim.cmd('split')
   vim.cmd('terminal')
   vim.cmd('resize 15')
@@ -360,7 +360,8 @@ require('lazy').setup({
       -- Document existing key chains
       spec = {
         { '<leader>s', group = '[S]earch' },
-        { '<leader>t', group = '[T]erminal' },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>r', group = 'Te[R]minal' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
