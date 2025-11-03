@@ -698,6 +698,13 @@ require('lazy').setup({
             },
           },
         },
+
+        omnisharp = {
+          -- Enable RoslyAnalyzer for omnisharp
+          enable_roslyn_analyzers = true,
+          -- Organize imports on format
+          organize_imports_on_format = true,
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -835,7 +842,10 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'super-tab',
+        preset = 'default',
+        
+        ['<Tab>'] = { 'select_and_accept', 'fallback' },
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -850,7 +860,9 @@ require('lazy').setup({
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = false, auto_show_delay_ms = 500 },
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+        -- Enable automatic completion menu
+        menu = { auto_show = true, auto_show_delay_ms = 0 },
       },
 
       sources = {
@@ -984,7 +996,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

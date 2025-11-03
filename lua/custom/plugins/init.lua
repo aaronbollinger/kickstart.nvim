@@ -2,4 +2,7 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  { import = 'custom.plugins.bufferline' },
+  { import = 'custom.plugins.fugitive' },
+}
