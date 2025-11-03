@@ -5,4 +5,5 @@
 return {
   { import = 'custom.plugins.bufferline' },
   { import = 'custom.plugins.fugitive' },
+  { import = 'custom.plugins.copilot' }
 }
