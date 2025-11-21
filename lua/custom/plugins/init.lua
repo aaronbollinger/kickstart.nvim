@@ -5,5 +5,6 @@
 return {
   { import = 'custom.plugins.bufferline' },
   { import = 'custom.plugins.fugitive' },
-  { import = 'custom.plugins.copilot' }
+  { import = 'custom.plugins.copilot' },
+  { import = 'custom.plugins.neotest' }
 }
