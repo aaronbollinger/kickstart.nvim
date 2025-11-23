@@ -9,13 +9,8 @@ return {
   },
   config = function()
     require("neotest").setup({
-      log_level = vim.log.levels.DEBUG,
       adapters = {
-        require("neotest-vstest")({
-          -- Path to dotnet sdk path.
-          -- Used in cases where the sdk path cannot be auto discovered.
-          sdk_path = "/home/abollinger/.dotnet/"
-        })
+        require("neotest-vstest")
       }
     })
 
