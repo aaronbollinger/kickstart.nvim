@@ -11,6 +11,11 @@ return {
     require("neotest").setup({
       adapters = {
         require("neotest-vstest")
+      },
+      floating = {
+        border = "rounded",
+        max_height = 0.6,
+        max_width = 0.6,
       }
     })
 
